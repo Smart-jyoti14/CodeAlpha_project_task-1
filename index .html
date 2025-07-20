@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('flowers')">Flowers</button>
+    <button onclick="filterGallery('sunset')">Sunset</button>
+    <button onclick="filterGallery('nightview')">Nightview</button>
+    <button onclick="filterGallery('temple')">Temple</button>  
+    </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery">
+    <img src="nature1.jpg" class="gallery-img nature" onclick="openLightbox(this.src)">
+    <img src="nature2.jpg" class="gallery-img nature" onclick="openLightbox(this.src)">
+    <img src="nature3.jpg"class="gallery-img nature" onclick="openLightbox(this.src)">
+    <img src="nature4.jpg"class="gallery-img nature" onclick="openLightbox(this.src)">
+    <img src="flower.jpg" class="gallery-img flowers" onclick="openLightbox(this.src)">
+    <img src="flower2.jpg" class="gallery-img flowers" onclick="openLightbox(this.src)">
+    <img src="flower3.jpg" class="gallery-img flowers" onclick="openLightbox(this.src)">
+    <img src="flower4.jpg" class="gallery-img flowers" onclick="openLightbox(this.src)">
+    <img src="sunset4.jpg" class="gallery-img sunset" onclick="openLightbox(this.src)">
+    <img src="sunset3.jpg" class="gallery-img sunset" onclick="openLightbox(this.src)">
+    <img src="sunset.jpg" class="gallery-img sunset" onclick="openLightbox(this.src)">
+    <img src="sunset2.jpg" class="gallery-img sunset" onclick="openLightbox(This.src)">
+    <img src="night.jpg" class="gallery-img nightview" onclick="openLightbox(this.src)">
+    <img src="night2.jpg" class="gallery-img nightview" onclick="openLightbox(this.src)">
+    <img src="night3.jpg" class="gallery-img nightview" onclick="openLightbox(this.src)">
+    <img src="night4.jpg" class="gallery-img nightview" onclick="openLightbox(this.src)">
+    <img src="temple.jpg" class="gallery-img temple" onclick="openLightbox(this.src)">
+    <img src="temple2.jpg" class="gallery-img temple" onclick="openLightbox(this.src)">
+    <img src="temple3.jpg" class="gallery-img temple" onclick="openLightbox(this.src)">
+    <img src="temple4.jpg" class="gallery-img temple" onclick="openLightbox(this.src)">
+    <!-- Add more images -->
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="prev" onclick="prevImage(event)">❮</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="nextImage(event)">❯</span>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

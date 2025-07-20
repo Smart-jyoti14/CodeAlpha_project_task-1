@@ -1,0 +1,94 @@
+body {
+  font-family:sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 6px;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 8px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.lightbox .prev, .lightbox .next {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 20px;
+  transform: translateY(-50%);
+}
+
+.lightbox .prev {
+  left: 0;
+}
+
+.lightbox .next {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filters button {
+    margin: 5px 2px;
+    padding: 6px 10px;
+  }
+}
+
+
+
+
